@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me perdonas mi amor?</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Binner+Poster&display=swap');
+
+        body {
+            font-family: 'Binner Poster', sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #DFACAA;
+        }
+        #si, #no {
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-family: 'Binner Poster', sans-serif;
+        }
+        #si {
+            background-color: #8ED873;
+        }
+        #no {
+            background-color: #D7282D;
+        }
+        #mensaje {
+            display: none;
+            font-size: 30px;
+            margin-top: 20px;
+        }
+        #imagen {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Me perdonas mi amor?</h1>
+    <button id="si" onclick="perdonar()">Sí</button>
+    <button id="no" onclick="noPerdonar()">No</button>
+    <div id="mensaje">gracias por perdonarme, se q la cague pero acuerdate que tu novia te ama con todo su corazon y por eso cree esto para disculparme, te amo mi cielo</div>
+    <img id="imagen" src="https://i.pinimg.com/564x/06/d3/44/06d344705e03752b58805a8e737017c3.jpg" alt="">
+
+    <script>
+        let tamañoBoton = 20;
+
+        function noPerdonar() {
+            tamañoBoton += 10;
+            document.getElementById('si').style.fontSize = tamañoBoton + 'px';
+        }
+
+        function perdonar() {
+            document.getElementById('mensaje').style.display = 'block';
+            document.getElementById('imagen').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
